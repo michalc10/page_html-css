@@ -1,10 +1,52 @@
-.nawigacja {
+$blue: rgb(0, 0, 255);
+$yellow: yellow;
+$gray: #F2F2F2;
+$max-width: 1440px;
+
+.main{
+   margin-bottom:10px;
+}
+
+.grid{
+    max-width:$max-width;
+    border-style: solid;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+}
+
+.navigation{
+    position: static;
+    background-color: $yellow;
+    width: 100%;
     //....
         &__link {
+            margin-right:2px;
             // ....
-            &--aktywny {
-                 color: blue;
+            &--active {
+                 color: $blue;
                  
             }
         }
+
+        &__list{
+            display:flex;  
+            list-style:none;
+            float: right;
+        }
+}
+
+.box1{
+
+    background-color: $gray;
+    &__drawer1{
+        grid-column: 2/ span 3;
+    }
+    &__drawer2{
+        grid-column: 6/ span 2;
+    }
+    &__drawer3{
+        grid-column: 9/ span 3;
+        
+    }
 }
