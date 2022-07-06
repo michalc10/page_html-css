@@ -381,25 +381,34 @@ button:hover {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(5, 1fr);
+
         row-gap: 10px;
         column-gap: 10px;
 
         &__mobile {
+            justify-self: stretch;
             grid-column: 1/span 12;
             grid-row: 1/span 3;
         }
 
         &__comp {
-            grid-column: 1/span 8;
+            justify-self: stretch;
+            grid-column: 1/span 7;
             grid-row: 4/span 2;
 
         }
 
         &__logo {
 
-            grid-column: 9/ span 4;
+            justify-self: stretch;
+            grid-column: 8/ span 5;
             grid-row: 4/span 2;
         }
 
     }
+}
+.img1{
+    
+    height: 100%;
+    width: 100%;
 }
