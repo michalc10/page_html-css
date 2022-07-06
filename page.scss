@@ -1,52 +1,158 @@
 $blue: rgb(0, 0, 255);
 $yellow: yellow;
 $gray: #F2F2F2;
-$max-width: 1440px;
+$red: #E92F03;
 
-.main{
-   margin-bottom:10px;
+
+$max-width: 1400px;
+
+.main {
+    margin-bottom: 10px;
 }
 
-.grid{
-    max-width:$max-width;
-    border-style: solid;
-    margin: auto;
+.grid {
+    //border-style: solid;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
 
-.navigation{
-    position: static;
-    background-color: $yellow;
+.navigation {
+
     width: 100%;
-    //....
-        &__link {
-            margin-right:2px;
-            // ....
-            &--active {
-                 color: $blue;
-                 
+    height: auto;
+    position: relative;
+
+    background-image: url('images/yellowphoto.jpg');
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-size: 100%, 100%;
+
+    &__grid-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &__image-logo {
+            //align-self: center;
+            grid-column: 1;
+            grid-row: 1;
+            margin-top: 3%;
+            margin-left: 5%;
+        }
+
+        &__list {
+            grid-column: 2;
+            grid-row: 1;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 3%;
+
+            //justify-self: end;
+            list-style: none;
+            margin-right: 5%;
+
+            &__iteam {
+                height: 20p;
+                margin-right: 10;
+                color: #353534;
+                font-size: 15px;
+                font-weight: 800;
+                letter-spacing: 0;
+                line-height: 5px;
+                text-align: right;
+            }
+
+            &__button {
+                height: 50px;
+                background-color: $red;
+                border: none;
+                color: white;
+                text-align: center;
+                white-space: nowrap;
+            }
+
+            &__link {
+                margin-right: 10px;
+                min-height: 20px;
+
+                // ....
+                &--active {
+                    //color: $blue;
+                    font-weight: bold;
+
+                }
             }
         }
+    }
 
-        &__list{
-            display:flex;  
-            list-style:none;
-            float: right;
+    &__grid-body {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+
+        &__image-Nordic {
+            width: 225px;
+            height: 225px;
+            grid-column: 6/2 span;
+            grid-row: 3/3 span;
+            align-self: center;
+            // margin-left: auto;
+            // display: block;
+            // margin-right: 100px;
+            // text-align: right;
         }
+
+        &__text_bold {
+            grid-column: 2/3 span;
+            grid-row: 3/3 span;
+            align-self: center;
+            // top: -100px;
+            // left: 200px;
+            font-weight: 100;
+            font-size: 60px;
+            text-align: left;
+        }
+
+        &__text {
+            grid-column: 3/7 span;
+            grid-row: 7;
+            //position: absolute;
+            font-weight: 100;
+            // left: 300px;
+            font-size: 14px;
+            line-height: 36px;
+            text-align: left;
+        }
+    }
+
+
 }
 
-.box1{
+.box {
+    &__box1 {
+        margin: auto;
+        //margin-top: -30px;
+        max-width: $max-width;
+        background-color: $gray;
 
-    background-color: $gray;
-    &__drawer1{
-        grid-column: 2/ span 3;
-    }
-    &__drawer2{
-        grid-column: 6/ span 2;
-    }
-    &__drawer3{
-        grid-column: 9/ span 3;
-        
+        &__drawer1 {
+            grid-column: 2/ span 3;
+        }
+
+        &__drawer2 {
+            grid-column: 6/ span 2;
+        }
+
+        &__drawer3 {
+            grid-column: 9/ span 3;
+
+        }
+
+        &__bold-text {
+            // font-family: Montserrat;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 0;
+            line-height: 16px;
+        }
     }
 }
