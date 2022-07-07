@@ -4,12 +4,6 @@ a:hover {
   text-decoration: underline;
 }
 
-button:hover {
-  background-color: yellow;
-  color: black;
-  font-size: 25px;
-}
-
 .main {
   margin-bottom: 10px;
   max-width: 1100px;
@@ -69,6 +63,11 @@ button:hover {
   color: white;
   text-align: center;
   white-space: nowrap;
+}
+.navigation__grid-top__list :hover {
+  background-color: yellow;
+  color: black;
+  font-size: 25px;
 }
 .navigation__grid-top__list__link {
   margin-right: 10px;
@@ -427,6 +426,33 @@ button:hover {
   height: 1px;
   opacity: 0.2;
   background-color: #838383;
+}
+.box__technologies {
+  max-width: 700px;
+  margin: auto;
+}
+.box__technologies__investments {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+}
+.box__technologies__investments__button {
+  height: 30px;
+  background-color: #E92F03;
+  border-radius: 20px;
+  border: none;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+.box__technologies__technologies {
+  color: black;
+  font-family: Roboto;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 26px;
 }
 
 .img1 {
