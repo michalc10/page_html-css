@@ -71,7 +71,7 @@ button:hover {
     //background-attachment: fixed;
 
     &__grid-top {
-        background-color:yellow;
+        background-color: yellow;
         position: fixed;
         display: flex;
         justify-content: space-between;
@@ -87,7 +87,7 @@ button:hover {
             align-self: center;
             margin-left: 5%;
 
-            @include rwd("tablet"){
+            @include rwd("tablet") {
                 visibility: hidden;
             }
         }
@@ -145,7 +145,7 @@ button:hover {
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(7, 1fr);
 
-        @include rwd("tablet"){
+        @include rwd("tablet") {
 
             grid-template-columns: 1fr;
             grid-template-rows: repeat(7, 1fr);
@@ -159,15 +159,16 @@ button:hover {
             grid-column: 6/2 span;
             grid-row: 3/3 span;
             align-self: center;
+
             // margin-left: auto;
             // display: block;
             // margin-right: 100px;
             // text-align: right;
-            @include rwd("tablet"){
+            @include rwd("tablet") {
 
                 grid-column: 1;
                 grid-row: 5/span 2;
-    
+
             }
         }
 
@@ -181,11 +182,12 @@ button:hover {
             font-size: 60px;
             text-align: left;
 
-            @include rwd("tablet"){
+            @include rwd("tablet") {
 
                 grid-column: 1;
                 grid-row: 3/span 2;
-    
+                text-align: center;
+
             }
         }
 
@@ -198,11 +200,12 @@ button:hover {
             font-size: 14px;
             line-height: 36px;
             text-align: left;
-            @include rwd("tablet"){
-                
+
+            @include rwd("tablet") {
+
                 grid-column: 1;
                 grid-row: 7;
-    
+
             }
 
         }
@@ -215,9 +218,10 @@ button:hover {
     @include rwd("tablet") {
         margin-left: 5%;
         margin-right: 5%;
-        $space_between_content:100px;
+        $space_between_content: 100px;
 
     }
+
     &__text {
         color: #323232;
         font-family: Montserrat;
@@ -239,6 +243,8 @@ button:hover {
 
             @include rwd("small-tablet") {
                 grid-template-rows: repeat(3, 1fr);
+
+                text-align: center;
             }
 
             &__drawer1 {
@@ -336,7 +342,7 @@ button:hover {
             grid-template-columns: repeat(3, 1fr);
 
             @include rwd("tablet") {
-                grid-template-rows:  1fr 1fr auto;
+                grid-template-rows: 1fr 1fr auto;
                 grid-template-columns: repeat(1, 1fr);
                 justify-items: center;
             }
@@ -470,6 +476,104 @@ button:hover {
         }
 
     }
+
+    &__statistics {
+        background-color: $gray;
+
+        &__grid--inside {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            text-align: center;
+
+            @include rwd("small-tablet") {
+                grid-template-rows: repeat(3, 1fr);
+                //justify-items: center;
+            }
+
+            @include rwd("tablet") {
+                grid-template-rows: repeat(2, 1fr);
+                //justify-items: center;
+            }
+
+            &__drawer1 {
+                grid-column: 3/ span 2;
+
+                @include rwd("tablet") {
+                    grid-column: 2/ span 4;
+                    grid-row: 1;
+                }
+
+                @include rwd("small-tablet") {
+                    grid-column: 3/ span 8;
+                    grid-row: 1;
+                }
+            }
+
+            &__drawer2 {
+                grid-row: 1;
+                grid-column: 6/ span 2;
+
+                @include rwd("tablet") {
+                    grid-column: 8/ span 4;
+                    grid-row: 1;
+                }
+
+                @include rwd("small-tablet") {
+                    grid-column: 3/ span 8;
+                    grid-row: 2;
+                }
+            }
+
+            &__drawer3 {
+                grid-row: 1;
+                grid-column: 9/ span 2;
+
+                @include rwd("tablet") {
+                    grid-column: 5/ span 4;
+                    grid-row: 2;
+                }
+
+                @include rwd("small-tablet") {
+                    grid-column: 3/ span 8;
+                    grid-row: 3;
+
+                }
+            }
+
+
+        }
+
+        &__text-number {
+
+            color: #323232;
+            font-family: Roboto;
+            font-size: 100px;
+            font-weight: 100;
+            letter-spacing: 0;
+            line-height: 35px;
+        }
+
+        &__description-text {
+
+            color: #323232;
+            font-family: Montserrat;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 20px;
+        }
+
+        &__line {
+            margin-top: -45px;
+            margin-bottom: 45px;
+            width: 100%;
+            height: 1px;
+            opacity: 0.2;
+            background-color: #838383;
+
+        }
+    }
+
 }
 
 .img1 {
