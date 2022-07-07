@@ -1,6 +1,5 @@
 a:hover {
   font-weight: bold;
-  font-size: 25px;
   text-decoration: underline;
 }
 
@@ -31,14 +30,16 @@ a:hover {
   flex-wrap: wrap;
   width: 100%;
 }
+@media (max-width: 1024px) {
+  .navigation__grid-top {
+    padding-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 .navigation__grid-top__image-logo {
   align-self: center;
   margin-left: 5%;
-}
-@media (max-width: 768px) {
-  .navigation__grid-top__image-logo {
-    visibility: hidden;
-  }
 }
 .navigation__grid-top__list {
   display: flex;
@@ -46,6 +47,11 @@ a:hover {
   justify-content: space-around;
   list-style: none;
   margin-right: 5%;
+}
+@media (max-width: 768px) {
+  .navigation__grid-top__list {
+    justify-content: center;
+  }
 }
 .navigation__grid-top__list__iteam {
   color: #353534;
@@ -67,7 +73,6 @@ a:hover {
 .navigation__grid-top__list :hover {
   background-color: yellow;
   color: black;
-  font-size: 25px;
 }
 .navigation__grid-top__list__link {
   margin-right: 10px;

@@ -1,6 +1,5 @@
-$blue: rgb(0, 0, 255);
-$yellow: yellow;
-$gray: #F2F2F2;
+$yellow-light: yellow;
+$bacgraound-box-gray-light: #F2F2F2;
 $red: #E92F03;
 
 $space_between_content:200px;
@@ -37,7 +36,6 @@ $breakpoints: ("phone" : "(max-width: 360px)",
 
 a:hover {
     font-weight: bold;
-    font-size: 25px;
     text-decoration: underline;
 }
 
@@ -72,19 +70,21 @@ a:hover {
         justify-content: space-between;
         flex-wrap: wrap;
         width: 100%;
-        //grid-template-columns: repeat(2, 1fr);
+
+
+        @include rwd("large-tablet") {
+            padding-top: 10px;
+            justify-content: center;
+            flex-direction: column;
+        }
+
 
         &__image-logo {
-            // align-self: center;
-            // grid-column: 1;
-            // grid-row: 1;
-            // flex-grow: 1;
+            
             align-self: center;
             margin-left: 5%;
 
-            @include rwd("tablet") {
-                visibility: hidden;
-            }
+
         }
 
         &__list {
@@ -94,6 +94,10 @@ a:hover {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+
+            @include rwd("tablet") {
+                justify-content: center;
+            }
             //margin-top: 3%;
 
             //justify-self: end;
@@ -120,9 +124,8 @@ a:hover {
             }
 
             :hover {
-                background-color: $yellow;
+                background-color: $yellow-light;
                 color: black;
-                font-size: 25px;
             }
 
             &__link {
@@ -235,7 +238,7 @@ a:hover {
     &__info-company {
         margin-top: -10px;
         margin-bottom: $space_between_content;
-        background-color: $gray;
+        background-color: $bacgraound-box-gray-light;
 
         //grid-column: 1/12 span;
         &__grid--inside {
@@ -479,7 +482,7 @@ a:hover {
     }
 
     &__statistics {
-        background-color: $gray;
+        background-color: $bacgraound-box-gray-light;
         margin-bottom: $space_between_content;
 
         &__grid--inside {
