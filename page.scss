@@ -85,6 +85,10 @@ button:hover {
             // flex-grow: 1;
             align-self: center;
             margin-left: 5%;
+
+            @include rwd("tablet"){
+                visibility: hidden;
+            }
         }
 
         &__list {
@@ -180,6 +184,12 @@ button:hover {
 }
 
 .box {
+    @include rwd("tablet") {
+        margin-left: 5%;
+        margin-right: 5%;
+        $space_between_content:100px;
+
+    }
     &__text {
         color: #323232;
         font-family: Montserrat;
@@ -297,9 +307,21 @@ button:hover {
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: repeat(3, 1fr);
 
+            @include rwd("tablet") {
+                grid-template-rows:  1fr 1fr auto;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+            }
+
             &__image {
                 grid-row: 1/span 2;
                 grid-column: 1;
+
+                @include rwd("tablet") {
+                    grid-row: 1;
+                    grid-column: 1;
+
+                }
             }
 
             &__text {
@@ -315,6 +337,14 @@ button:hover {
                 font-weight: 300;
                 letter-spacing: 0;
                 line-height: 36px;
+
+                @include rwd("tablet") {
+                    grid-row: 2;
+                    grid-column: 1;
+                    // margin-left: 5%;
+                    // margin-right: 5%;
+
+                }
             }
 
             &__info-ceo {
@@ -329,6 +359,12 @@ button:hover {
                 font-weight: bold;
                 letter-spacing: 0;
                 line-height: 28px;
+
+                @include rwd("tablet") {
+                    grid-row: 3;
+                    grid-column: 1;
+
+                }
 
             }
 
@@ -407,8 +443,9 @@ button:hover {
 
     }
 }
-.img1{
-    
+
+.img1 {
+
     height: 100%;
     width: 100%;
 }

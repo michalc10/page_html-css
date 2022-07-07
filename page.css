@@ -40,6 +40,11 @@ button:hover {
   align-self: center;
   margin-left: 5%;
 }
+@media (max-width: 768px) {
+  .navigation__grid-top__image-logo {
+    visibility: hidden;
+  }
+}
 .navigation__grid-top__list {
   display: flex;
   flex-wrap: wrap;
@@ -99,6 +104,12 @@ button:hover {
   text-align: left;
 }
 
+@media (max-width: 768px) {
+  .box {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 .box__text {
   color: #323232;
   font-family: Montserrat;
@@ -189,9 +200,22 @@ button:hover {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
 }
+@media (max-width: 768px) {
+  .box__ceo__grid--inside {
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+}
 .box__ceo__grid--inside__image {
   grid-row: 1/span 2;
   grid-column: 1;
+}
+@media (max-width: 768px) {
+  .box__ceo__grid--inside__image {
+    grid-row: 1;
+    grid-column: 1;
+  }
 }
 .box__ceo__grid--inside__text {
   justify-self: flex-start;
@@ -206,6 +230,12 @@ button:hover {
   letter-spacing: 0;
   line-height: 36px;
 }
+@media (max-width: 768px) {
+  .box__ceo__grid--inside__text {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
 .box__ceo__grid--inside__info-ceo {
   justify-self: flex-start;
   align-self: flex-start;
@@ -217,6 +247,12 @@ button:hover {
   font-weight: bold;
   letter-spacing: 0;
   line-height: 28px;
+}
+@media (max-width: 768px) {
+  .box__ceo__grid--inside__info-ceo {
+    grid-row: 3;
+    grid-column: 1;
+  }
 }
 .box__stage {
   margin-bottom: 200px;
