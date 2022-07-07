@@ -30,6 +30,7 @@ button:hover {
   z-index: -1;
 }
 .navigation__grid-top {
+  background-color: yellow;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -79,12 +80,25 @@ button:hover {
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
 }
+@media (max-width: 768px) {
+  .navigation__grid-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    justify-items: center;
+  }
+}
 .navigation__grid-body__image-Nordic {
   width: 225px;
   height: 225px;
   grid-column: 6/2 span;
   grid-row: 3/3 span;
   align-self: center;
+}
+@media (max-width: 768px) {
+  .navigation__grid-body__image-Nordic {
+    grid-column: 1;
+    grid-row: 5/span 2;
+  }
 }
 .navigation__grid-body__text_bold {
   grid-column: 2/3 span;
@@ -94,6 +108,12 @@ button:hover {
   font-size: 60px;
   text-align: left;
 }
+@media (max-width: 768px) {
+  .navigation__grid-body__text_bold {
+    grid-column: 1;
+    grid-row: 3/span 2;
+  }
+}
 .navigation__grid-body__text {
   grid-column: 3/7 span;
   grid-row: 7;
@@ -102,6 +122,12 @@ button:hover {
   font-size: 14px;
   line-height: 36px;
   text-align: left;
+}
+@media (max-width: 768px) {
+  .navigation__grid-body__text {
+    grid-column: 1;
+    grid-row: 7;
+  }
 }
 
 @media (max-width: 768px) {

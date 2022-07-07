@@ -71,6 +71,7 @@ button:hover {
     //background-attachment: fixed;
 
     &__grid-top {
+        background-color:yellow;
         position: fixed;
         display: flex;
         justify-content: space-between;
@@ -144,6 +145,14 @@ button:hover {
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(7, 1fr);
 
+        @include rwd("tablet"){
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(7, 1fr);
+            justify-items: center;
+
+        }
+
         &__image-Nordic {
             width: 225px;
             height: 225px;
@@ -154,6 +163,12 @@ button:hover {
             // display: block;
             // margin-right: 100px;
             // text-align: right;
+            @include rwd("tablet"){
+
+                grid-column: 1;
+                grid-row: 5/span 2;
+    
+            }
         }
 
         &__text_bold {
@@ -165,6 +180,13 @@ button:hover {
             font-weight: 100;
             font-size: 60px;
             text-align: left;
+
+            @include rwd("tablet"){
+
+                grid-column: 1;
+                grid-row: 3/span 2;
+    
+            }
         }
 
         &__text {
@@ -176,6 +198,12 @@ button:hover {
             font-size: 14px;
             line-height: 36px;
             text-align: left;
+            @include rwd("tablet"){
+                
+                grid-column: 1;
+                grid-row: 7;
+    
+            }
 
         }
     }
