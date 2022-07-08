@@ -1,11 +1,12 @@
 $yellow-light: yellow;
-$bacgraound-box-gray-light: #F2F2F2;
+$background-box-gray-light: #F2F2F2;
 $red-medium: #E92F03;
 $text-color: #323232;
 $small-font-size-text:15px;
 $lagre-font-size-text:30px;
-
-$space_between_content:200px;
+$white-light:#FFFFFF;
+$bacground-end-page:#838383;
+$space-between-content:200px;
 
 $max-width: 1100px;
 $min-width:700px;
@@ -83,7 +84,7 @@ a:hover {
 
 
         &__image-logo {
-            
+
             align-self: center;
             margin-left: 5%;
 
@@ -101,6 +102,7 @@ a:hover {
             @include rwd("tablet") {
                 justify-content: center;
             }
+
             //margin-top: 3%;
 
             //justify-self: end;
@@ -161,8 +163,8 @@ a:hover {
         }
 
         &__image-nordic {
-            width: 225px;
-            height: 225px;
+            max-width: 225px;
+            max-height: 225px;
             grid-column: 6/2 span;
             grid-row: 3/3 span;
             align-self: center;
@@ -225,7 +227,7 @@ a:hover {
     @include rwd("tablet") {
         margin-left: 5%;
         margin-right: 5%;
-        $space_between_content: 100px;
+        $space-between-content: 100px;
 
     }
 
@@ -240,8 +242,8 @@ a:hover {
 
     &__info-company {
         margin-top: -10px;
-        margin-bottom: $space_between_content;
-        background-color: $bacgraound-box-gray-light;
+        margin-bottom: $space-between-content;
+        background-color: $background-box-gray-light;
 
         //grid-column: 1/12 span;
         &__grid--inside {
@@ -302,7 +304,7 @@ a:hover {
     }
 
     &__service_technology {
-        margin-bottom: $space_between_content;
+        margin-bottom: $space-between-content;
 
 
         &__grid--inside {
@@ -341,12 +343,13 @@ a:hover {
 
     &__ceo {
 
-        margin-bottom: $space_between_content;
+        margin-bottom: $space-between-content;
 
-        &__grid--inside {
+        &__grid-inside {
             display: grid;
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
 
             @include rwd("tablet") {
                 grid-template-rows: 1fr 1fr auto;
@@ -357,11 +360,15 @@ a:hover {
             &__image {
                 grid-row: 1/span 2;
                 grid-column: 1;
-
+                
                 @include rwd("tablet") {
                     grid-row: 1;
                     grid-column: 1;
 
+                }
+                &__scale{
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
 
@@ -389,8 +396,8 @@ a:hover {
             }
 
             &__info-ceo {
-                justify-self: flex-start;
-                align-self: flex-start;
+                //justify-self: flex-start;
+                //align-self: flex-start;
                 grid-row: 1;
                 grid-column: 2/span 2;
 
@@ -414,7 +421,7 @@ a:hover {
     }
 
     &__stage {
-        margin-bottom: $space_between_content;
+        margin-bottom: $space-between-content;
 
 
         &__change-size {
@@ -454,7 +461,7 @@ a:hover {
     }
 
     &__photos {
-        margin-bottom: $space_between_content;
+        margin-bottom: $space-between-content;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(5, 1fr);
@@ -485,8 +492,8 @@ a:hover {
     }
 
     &__statistics {
-        background-color: $bacgraound-box-gray-light;
-        margin-bottom: $space_between_content;
+        background-color: $background-box-gray-light;
+        margin-bottom: $space-between-content;
 
         &__grid--inside {
             display: grid;
@@ -597,7 +604,7 @@ a:hover {
                 border-radius: 20px;
                 border: none;
 
-                color: #FFFFFF;
+                color: $white-light;
                 font-family: Roboto;
                 font-size: $small-font-size-text;
                 letter-spacing: 0;
@@ -612,23 +619,136 @@ a:hover {
             letter-spacing: 0;
             line-height: 26px;
 
-            @include rwd("tablet"){
-            text-align: center;
+            @include rwd("tablet") {
+                text-align: center;
 
+            }
+        }
+    }
+
+    &__contact {
+        margin-top: $space-between-content;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+
+        @include rwd("tablet") {
+            grid-template-rows: repeat(4, 1fr);
+            justify-items: center;
+        }
+
+        &__headline {
+            grid-column: 2/10 span;
+            grid-row: 1;
+
+            color: $text-color;
+            font-family: Montserrat;
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 80px;
+        }
+
+
+        &__ceo-picture {
+            grid-column: 2/span 2;
+            grid-row: 2;
+
+            @include rwd("tablet") {
+                grid-column: 2/10 span;
+                grid-row: 2;
+            }
+
+            &__scale{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__data {
+            grid-column: 5/span 3;
+            grid-row: 2;
+
+            @include rwd("tablet") {
+                grid-column: 2/10 span;
+                grid-row: 3;
+            }
+        }
+
+        &__location {
+            grid-column: 9/span 3;
+            grid-row: 2;
+
+            @include rwd("tablet") {
+                grid-column: 2/10 span;
+                grid-row: 4;
+            }
+
+        }
+
+        &__forgraund-text {
+            margin-bottom: 35px;
+
+            color: $text-color;
+            font-family: Montserrat;
+            font-size: 18px;
+            letter-spacing: 0;
+            line-height: 25px;
+
+        }
+
+        &__p-size {
+
+            margin-block-start: 2px;
+            margin-block-end: 2px;
+        }
+
+        &__background-text {
+            display: flex;
+            flex-direction: column;
+
+            color: $text-color;
+            font-family: Roboto;
+            font-size: 15px;
+            letter-spacing: 0;
+            line-height: 21px;
+        }
+    }
+
+}
+
+
+.end-page {
+    background-color: $bacground-end-page;
+    width: 100%;
+
+    &__margin-content {
+        max-width: $max-width;
+        margin: auto;
+        &__grid-content{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            &__information-box{
+                grid-column: 1/span 3;
+            }
+            &__newsletter-box{
+                grid-column: 4/span 6;
+            }
+            &__information-box{
+                grid-column: 10/span 3;
             }
         }
     }
 
 }
 
-.img1 {
+.img-baner {
 
     height: auto;
     width: 100%;
 }
 
 .img-phone {
-    margin-bottom: $space_between_content;
+    margin-bottom: $space-between-content;
     width: 100%;
     max-height: 400px;
     object-fit: cover;
